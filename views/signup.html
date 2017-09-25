@@ -1,0 +1,149 @@
+<div class="row" style="width:100%;height:{{height}}px">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
+       <form name="signupForm">
+        <p class="h5 text-center mb-4">Sign up</p>
+
+        <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input id="fname" type="text" name="fname" ng-model="user.firstName" class="form-control" required>
+            <label for="fname">First name</label>
+        </div>
+
+         <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input id="lname" type="text" name="lname" ng-model="user.lastName" class="form-control" required>
+            <label for="lname">Last name</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" id="email" name="email" ng-model="user.email" class="form-control" required>
+            <label for="email">Email</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-lock prefix grey-text"></i>
+            <input id="password" type="password" name="password" ng-model="user.password" class="form-control" required>
+            <label for="password">Password</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-lock prefix grey-text"></i>
+            <input id="confirmPassword" type="password" name="confirmPassword" ng-model="user.confirmPassword" class="form-control" required>
+            <label for="confirmPassword">Confirm Password</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-mobile prefix grey-text"></i>
+            <input type="number" id="mobile" name="mobile" ng-model="user.mobile" class="form-control" required>
+            <label for="mobile">Mobile</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-book prefix grey-text"></i>
+            <input type="text" id="experience" name="experience" ng-model="user.experience" class="form-control" required>
+            <label for="experience">Experience</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-bomb prefix grey-text"></i>
+            <input id="noticePeriod" type="text" name="noticePeriod" ng-model="user.noticePeriod" class="form-control" required>
+            <label for="noticePeriod">Notice Period</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-user-circle prefix grey-text"></i>
+            <input id="currentOrganization" type="text" name="currentOrganization" ng-model="user.currentOrganization" class="form-control" required>
+            <label for="currentOrganization">Current Organization</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-user-o prefix grey-text"></i>
+            <input id="currentRole" type="text" name="currentRole" ng-model="user.currentRole" class="form-control" required>
+            <label for="currentRole">Current Role</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-user-plus prefix grey-text"></i>
+            <input id="requiredRole" type="text" name="requiredRole" ng-model="user.requiredRole" class="form-control" required>
+            <label for="requiredRole">Required Role</label>
+        </div>
+
+        <div class="text-center col-sm-6">
+            <button type="submit" class="btn btn-deep-orange right" ng-click="register()" ng-disabled="signupForm.$invalid">Sign up</button>
+        </div>
+
+        <div class="text-center col-sm-6">
+            <a href="#" ng-click="backToLogin()">Back to signin</button>
+        </div>
+    </form>
+   </div>
+   <div class="col-sm-4"></div>
+</div>
+
+<!-- <div id="LoginScreen" style="width:100%;height:{{height}}px">
+	<div class="login-container">
+        <div id="signup">
+            <div class="signup-screen">
+                <div class="space-bot text-center">
+                    <h1>Sign up</h1>
+                </div>
+                <div class="alert alert-danger" ng-if="userData.error">
+                    {{ userData.error }}
+                </div>
+                <form name="signupForm">
+                    <div class="input-field col s6">
+                        <input id="first-name" type="text" name="fname" ng-model="user.firstName" class="validate" required>
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last-name" type="text" name="lname" ng-model="user.lastName" class="validate" required>
+                        <label for="last-name">Last Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="email" type="email" name="email" ng-model="user.email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="password" type="password" name="password" ng-model="user.password" ng-minlength='6' class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="mobile" type="number" name="mobile" ng-model="user.mobile" class="validate" required>
+                        <label for="mobile">Mobile</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="experience" type="text" name="experience" ng-model="user.experience" class="validate" required>
+                        <label for="experience">Experience</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="noticePeriod" type="text" name="noticePeriod" ng-model="user.noticePeriod" class="validate" required>
+                        <label for="noticePeriod">Notice Period</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="currentOrganization" type="text" name="currentOrganization" ng-model="user.currentOrganization" class="validate" required>
+                        <label for="currentOrganization">Current Organization</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="currentRole" type="text" name="currentRole" ng-model="user.currentRole" class="validate" required>
+                        <label for="currentRole">Current Role</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="requiredRole" type="text" name="requiredRole" ng-model="user.requiredRole" class="validate" required>
+                        <label for="requiredRole">Required Role</label>
+                    </div>
+                    <div class="space-top text-center">
+                        <button type="submit" class="waves-effect waves-light btn done" ng-click="register()" ng-disabled="signupForm.$invalid">
+                            <i class="material-icons left">done</i>Register
+                        </button>
+                        <button type="button" class="waves-effect waves-light btn cancel" ng-click="reset()">
+                            <i class="material-icons left">clear</i>Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ -->

@@ -1,0 +1,59 @@
+<div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak style="width:100%;height:{{height}}px">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar">
+            <li class="sidebar-main">
+                <a ng-click="toggleSidebar()">
+            FAPPS
+            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+          </a>
+            </li>
+            <li class="sidebar-title"><span>MENU</span></li>
+            <li class="sidebar-list">
+                <a ui-sref="home.dashboard" ng-click="getPath()">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a ui-sref="home.departments" ng-click="getPath()">Departments <span class="menu-icon fa fa-table"></span></a>
+            </li>
+            <li class="sidebar-list">
+                <a ui-sref="home.users" ng-click="getPath()">Users <span class="menu-icon fa fa-table"></span></a>
+            </li>
+        </ul>
+    </div>
+    <!-- End Sidebar -->
+    <div id="content-wrapper">
+        <div class="page-content">
+            <!-- Header Bar -->
+            <div class="row header">
+                <div class="col-xs-12">
+                    <div class="user pull-right">
+                        <div class="item dropdown">
+                            <a>
+                                <img src="styles/avatar.jpg">
+                            </a>
+                        </div>
+                            <button ng-click="logOut()">Sign Out</button>
+                        <div class="item dropdown login-info">
+                            <span>Welcome! </span>
+                            <span>{{userData.fname}}&nbsp;&nbsp;{{userData.lname}}</span>
+
+                        </div>
+                    </div>
+                    <div class="meta">
+                        <div class="page">
+                            {{locationHeader}}
+                        </div>
+                        <div class="breadcrumb-links">
+                            {{location}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Bar -->
+            <!-- Main Content -->
+            <div ui-view name="mainContent"></div>
+        </div>
+        <!-- End Page Content -->
+    </div>
+    <!-- End Content Wrapper -->
+</div>

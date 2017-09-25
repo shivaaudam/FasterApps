@@ -1,0 +1,144 @@
+body{
+  min-height: 100%;
+  background-color: #FDFEFE;
+}
+
+#LoginScreen{
+  background-image: url("image.jpg");
+}
+
+#page-wrapper{
+  overflow: auto;
+}
+.users-details{
+  background: #4285f4;
+letter-spacing: 0.8px;
+font-weight: bold;
+}
+
+.text-center{
+  text-align: center;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #BA4A00
+}
+
+.login-container{
+  max-width: 400px;
+  margin-top: 20px;
+  margin: auto;
+}
+
+.signup-screen {
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    background: rgba(130,130,130,.3);
+    border: 1px solid;
+    border-top-color: rgba(255,255,255,.4);
+    border-left-color: rgba(255,255,255,.4);
+    border-bottom-color: rgba(60,60,60,.4);
+    border-right-color: rgba(60,60,60,.4);
+}
+
+.input-field label{
+  color: white;
+}
+
+.space-top{
+  margin-top: 20px;
+}
+
+.space-bot{
+  margin-bottom: 35px;
+}
+
+.department-box{
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  background: #F0F8FF;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  border-color: #e9e9e9;
+}
+
+.department-box span{
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.title-text{
+  text-align: center;
+}
+
+.login-info{
+  width: 120px !important;
+  padding-top: 5px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.login-info span:first-child{
+  font-weight: normal;
+}
+
+.activity-box {
+    display: block;
+    position: fixed; /* fixed position so it doesn't scroll */
+    z-index: 9999; /* on top of everything else */
+    margin-left: -125px; /* horizontally centered */
+    left: 44%;
+    top: 10px; /* displayed on the top of the page, just like Gmail's yellow info-box */
+    height: 40px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* animating a static image */
+.activity-box img {
+    display: block;
+    position: absolute;
+}
+
+.ng-hide-add-active, .ng-hide-remove {
+  display: block!important;
+}
+
+.ng-hide-add-active, .ng-hide-remove {
+  display: inherit !important;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    min-height: 320px !important;
+    max-height: 390px !important;
+    width: 500px !important;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 2px;
+    will-change: top, opacity;
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.modal-footer button{
+  margin-right: 4px !important;
+}
+
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 500px;
+    margin: 10px !important;
+}
+}

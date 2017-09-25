@@ -1,0 +1,107 @@
+<div class="">
+  <button type="button" class="btn btn-success" ng-click="open()">Create Users</button>
+</div>
+<div>
+  <h3 class="page-header">Users Page</h3></div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <uib-tabset>
+      <uib-tab index="1" heading="Users" select="getUsers()">
+        <div class="row">
+          <div class="col-sm-3" ng-repeat='user in users'>
+            <div class="card">
+              <div class="card-block text-center">
+                <div class="card-title"></div>
+                <p class="card-text"></p>
+                <ul class="list-group text-left">
+                  <li class="list-group-item">Name<span class="badge badge-secondary users-details">{{user.name}}</span></li>
+                  <li class="list-group-item">Email Id<span class="badge badge-secondary users-details">{{user.email}}</span></li>
+                  <li class="list-group-item">Contact<span class="badge badge-secondary users-details">{{user.phone}}</span></li>
+                  <li class="list-group-item">Required Role<span class="badge badge-secondary users-details">{{user.requiredRole}}</span></li>
+                  <li class="list-group-item">Experience<span class="badge badge-secondary users-details">{{user.experience}}</li>
+                  <li class="list-group-item">Notice Period<span class="badge badge-secondary users-details">{{user.noticePeriod}}</li>
+                </ul>
+                <button type="button" class="btn btn-success btn-sm">View</button>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </uib-tab>
+      <uib-tab index="2" heading="Admins" select="getAdmins()">
+        <div class="row">
+          <div class="col-sm-3" ng-repeat='admin in admins'>
+            <div class="card">
+              <div class="card-block text-center">
+                <div class="card-title"></div>
+                <p class="card-text"></p>
+                <ul class="list-group text-left">
+                  <li class="list-group-item">Name<span class="badge badge-secondary users-details">{{admin.name}}</span></li>
+                  <li class="list-group-item">Email Id<span class="badge badge-secondary users-details">{{admin.email}}</span></li>
+                  <li class="list-group-item">Contact<span class="badge badge-secondary users-details">{{admin.phone}}</span></li>
+                  <li class="list-group-item">Employee Id<span class="badge badge-secondary users-details">{{admin.empId}}</span></li>
+                  <li class="list-group-item">Department<span class="badge badge-secondary users-details">{{admin.dept}}</li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </uib-tab>
+      <uib-tab index="3" heading="Interviewers" select="getInterviewers()">
+        <div class="row">
+          <div class="col-sm-3" ng-repeat='interviewer in interviewers'>
+            <div class="card">
+              <div class="card-block text-center">
+                <div class="card-title"></div>
+                <p class="card-text"></p>
+                <ul class="list-group text-left">
+                  <li class="list-group-item">Name<span class="badge badge-secondary users-details">{{interviewer.name}}</span></li>
+                  <li class="list-group-item">Email Id<span class="badge badge-secondary users-details">{{interviewer.email}}</span></li>
+                  <li class="list-group-item">Contact<span class="badge badge-secondary users-details">{{interviewer.phone}}</span></li>
+                  <li class="list-group-item">Employee Id<span class="badge badge-secondary users-details">{{interviewer.empId}}</span></li>
+                  <li class="list-group-item">Designation<span class="badge badge-secondary users-details">{{interviewer.designation}}</span></li>
+                  <li class="list-group-item">Department<span class="badge badge-secondary users-details">{{interviewer.dept}}</li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </uib-tab>
+      <uib-tab index="4" heading="Managers" select="getManagers()">
+        <div class="card w-75">
+          <div class="card-block">
+            <h3 class="card-title">Card title</h3>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+
+</div>
+
+<!-- <div class="row" ng-repeat="x in users">
+  {{x}}
+<div class="col-lg-3 col-md-3 col-sm-6 department-box" ng-repeat="y in x.children">
+        <div class="title-text">
+            <p>Name: {{y.name}}</p>
+            <p>Designation: {{y.Designation}}</p>
+            <p>Role: {{y.role}}</p>
+        </div>
+        <div>
+        	<button class="btn btn-success" ng-click="edit(y)">
+               Edit
+            </button>
+            <button class="btn btn-danger" ng-click="del(y)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div> -->

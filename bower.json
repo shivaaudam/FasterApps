@@ -1,0 +1,14 @@
+{
+  "name": "fapps",
+  "description": "example on angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "MDBootstrap": "^4.3.1",
+    "angular": "^1.6.4",
+    "angular-ui-router": "^0.4.2",
+    "angular-cookies": "^1.6.4",
+    "angular-bootstrap": "^2.5.0",
+    "js-sha256": "^0.5.0",
+    "angular-bootstrap-material": "abm#^0.1.4"
+  }
+}

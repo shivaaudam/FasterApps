@@ -1,0 +1,56 @@
+<div class="row" style="width:100%;height:{{height}}px">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
+       <form name="signinForm">
+        <p class="h5 text-center mb-4">Sign In</p>
+
+        <div class="md-form">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" id="email" name="email" ng-model="user.email" class="form-control" required>
+            <label for="email">Email</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-lock prefix grey-text"></i>
+            <input id="password" type="password" name="password" ng-model="user.password" class="form-control" required>
+            <label for="password">Password</label>
+        </div>
+
+       <div class="text-center col-sm-6">
+            <button type="submit" class="btn btn-deep-orange right" ng-click="login()" ng-disabled="signinForm.$invalid">Sign In</button>
+        </div>
+    </form>
+   </div>
+   <div class="col-sm-4"></div>
+</div>
+
+<!-- <div id="LoginScreen" style="width:100%;height:{{height}}px">
+    <div class="login-container">
+        <div id="signup">
+            <div class="signup-screen">
+                <div class="space-bot text-center">
+                    <h1>Sign In</h1>
+                </div>
+                <form name="loginForm" accept-charset="">
+                    <div class="input-field col s6">
+                        <input id="email" type="email" name="email" ng-model="register.user.email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="password" type="password" name="password" ng-model="register.user.password" ng-minlength='6' class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="space-top text-center">
+                        <button type="submit" class="waves-effect waves-light btn done" ng-click="login()" ng-disabled="loginForm.$invalid">
+                             Signin
+                        </button>
+                        <button type="button" class="waves-effect waves-light btn cancel" ui-sref="signup">
+                            SignUp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ -->

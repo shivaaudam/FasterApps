@@ -1,0 +1,19 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-info" ng-click="open()">Create Department</button>
+</div>
+<div><h1>Departments Page</h1></div>
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 department-box" ng-repeat="x in department">
+        <div class="title-text">
+            <span>{{x.departname}}</span>
+        </div>
+        <div>
+        	<button class="btn btn-success" ng-click="edit(x)">
+                 Edit
+            </button>
+            <button class="btn btn-danger" ng-click="del(x)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
